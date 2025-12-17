@@ -3,7 +3,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const DataContext = createContext();
+const DataContext = createContext({
+  reports: [],
+  addReport: () => {},
+  updateReport: () => {},
+  getReport: () => {},
+});
 
 export const useData = () => useContext(DataContext);
 
